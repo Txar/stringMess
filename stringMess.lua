@@ -1,8 +1,3 @@
---[[
-function love.draw()
-    love.graphics.print("Hello World", 400, 300)
-end
---]]
 function getList(str)
     strl = {}
     for i in string.gmatch(str, "%S+") do
@@ -63,7 +58,7 @@ function wordMess(str)
     return str2
 end
 
-str = "what a nice string you got there would be a shame if someone messed it up"
-print(messUp(str))
-print(advancedMess(str))
-print(wordMess(str))
+--str = "what a nice string you got there would be a shame if someone messed it up"
+print("Input a string you want to get messed up:")
+str = io.read()
+print("\n"..messUp(str).."\n\n"..advancedMess(str).."\n\n"..wordMess(str))
